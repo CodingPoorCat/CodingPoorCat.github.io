@@ -4,17 +4,33 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>CodingPoorCat&#39;s Blog</title>
+  <title>实现一个简单的$ | CodingPoorCat&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CodingPoorCat's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="实现一个简单的Query标签（空格分隔）： JS JQ
+
+前段时间写了一个简单的JQuery$函数，当然是在不使用querySelector的前提下。感觉自己对正则表达式书写，还有dom节点的遍历有了基础的认识。废话不多说，先说一下实现的功能：
+
+// 可以通过id获取DOM对象，通过#标示，例如$(“#adom”); // 返回id为adom的DOM对象
+// 可以通过tagName获取DOM对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实现一个简单的$">
+<meta property="og:url" content="http://yoursite.com/2016/03/22/实现一个简单的/index.html">
 <meta property="og:site_name" content="CodingPoorCat's Blog">
-<meta property="og:description">
+<meta property="og:description" content="实现一个简单的Query标签（空格分隔）： JS JQ
+
+前段时间写了一个简单的JQuery$函数，当然是在不使用querySelector的前提下。感觉自己对正则表达式书写，还有dom节点的遍历有了基础的认识。废话不多说，先说一下实现的功能：
+
+// 可以通过id获取DOM对象，通过#标示，例如$(“#adom”); // 返回id为adom的DOM对象
+// 可以通过tagName获取DOM对">
+<meta property="og:updated_time" content="2016-03-22T15:57:13.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CodingPoorCat's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="实现一个简单的$">
+<meta name="twitter:description" content="实现一个简单的Query标签（空格分隔）： JS JQ
+
+前段时间写了一个简单的JQuery$函数，当然是在不使用querySelector的前提下。感觉自己对正则表达式书写，还有dom节点的遍历有了基础的认识。废话不多说，先说一下实现的功能：
+
+// 可以通过id获取DOM对象，通过#标示，例如$(“#adom”); // 返回id为adom的DOM对象
+// 可以通过tagName获取DOM对">
   
     <link rel="alternative" href="/atom.xml" title="CodingPoorCat&#39;s Blog" type="application/atom+xml">
   
@@ -196,9 +212,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-实现一个简单的" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-实现一个简单的" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/03/22/实现一个简单的/" class="article-date">
@@ -214,12 +228,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/22/实现一个简单的/">实现一个简单的$</a>
+    <h1 class="article-title" itemprop="name">
+      实现一个简单的$
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -290,169 +311,40 @@ filter:
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/15/JS深度克隆及类型判断/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JS深度克隆及类型判断</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-JS深度克隆及类型判断" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/15/JS深度克隆及类型判断/" class="article-date">
-  	<time datetime="2016-03-15T13:02:36.000Z" itemprop="datePublished">2016-03-15</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/15/JS深度克隆及类型判断/">JS深度克隆及类型判断</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ife-递归实现深度克隆（内含JS数据类型判断，对象遍历）"><a href="#ife-递归实现深度克隆（内含JS数据类型判断，对象遍历）" class="headerlink" title="ife 递归实现深度克隆（内含JS数据类型判断，对象遍历）"></a><strong>ife 递归实现深度克隆（内含JS数据类型判断，对象遍历）</strong></h1><p>今天在做2015ife的题时，感觉收获很多，对于js基本类型有了新的认识。把在研究过程中所得记录下来！<br>题目是：</p>
-<blockquote>
-<p>// 使用递归来实现一个深度克隆，可以复制一个目标对象，返回一个完整拷贝<br>// 被复制的对象类型会被限制为数字、字符串、布尔、日期、数组、Object对象。不会包含函数、正则对象等</p>
-</blockquote>
-<p>首先要去判断要克隆的对象的值类型或者引用类型。判断方法有很多种！<br>对于值类型或者引用有4种方法判断</p>
-<h2 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1.typeof"></a>1.typeof</h2><p>但是！js的数值有两种构造方法：直接赋值法和通过值函数构造器构造<br>例如：<br>    <code>var test1 = &quot;string&quot;;
-    var test2 = new String(&quot;string2&quot;);
-    console.log(typeof test1);//输出string
-    console.log(typeof test2);//输出object</code><br>对于typeof来说；所有通过构造器constructor产生的变量都是object.那么我们怎么去判断用constructor产生的变量？</p>
-<h2 id="2-instanceof"><a href="#2-instanceof" class="headerlink" title="2.instanceof"></a>2.instanceof</h2><p>instanceof 函数可以判断左边参数是否是右边参数的一个实例！<br>例如：<br><code>console.log(test2 instanceof String);//输出true</code><br>但是！<br><code>console.log(test1 instanceof String);//输出false</code><br>这就很不和谐了！有没有两种都能判断的方法呢？</p>
-<h2 id="3-Object-prototype-toString-call"><a href="#3-Object-prototype-toString-call" class="headerlink" title="3.Object.prototype.toString.call()"></a>3.Object.prototype.toString.call()</h2><p>当然有！MDN在官方教程上就介绍了一种可以判断所有类型的方法！<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString" target="_blank" rel="external">使用toString()方法来检测对象类型</a></p>
-<p><code>console.log(Object.prototype.toString.call(test1))//输出[object String]
- console.log(Object.prototype.toString.call(test1))//输出[object String]</code><br> 顿时觉得人生豁然开朗了起来！啊~五环！你比四环多一环！</p>
-<h2 id="4-Object-constructor"><a href="#4-Object-constructor" class="headerlink" title="4.Object.constructor"></a>4.Object.constructor</h2><p>在研究MDN 的api文档的时候，发现了constructor方法！However这个方法<br>返回一个指向创建了该对象原型的函数引用。需要注意的是，该属性的值是那个函数本身，<br>而不是一个包含函数名称的字符串！<br>而不是一个包含函数名称的字符串！！<br>而不是一个包含函数名称的字符串！！！<br>对于原始值（如1，true 或 “test”），该属性为只读。<br>所有对象都会从它的原型上继承一个 constructor 属性.<br>所以，虽然可以实现判断，但是还是不用为好！<br><code>console.log(test1.constructor.toString()==&quot;function String() { [native code] }&quot;)//true;
-    console.log(test2.constructor.toString()==&quot;function String() { [native code] }&quot;)//true;</code><br><strong>总结：方法34对于所有值类型和引用类型适用（推荐第三种方法，毕竟官方），第12种方法看情况使用！</strong></p>
-<p> 然后来到遍历问题了！<br> <strong>1.字符串的遍历</strong></p>
-<pre><code>`
-     var temp = src.split(&quot;&quot;);
-        var cloneString=&quot;&quot;;
-        for(var i=0;i&lt;temp.length;i++)
-        {
-             cloneString+=temp[i];
-             }
-
-`
-原理就是利用split方法将字符串里一个个字母分开（注意里面的参数为空&quot;&quot;,为其他就会以这个参数为标准分离字符串）
-</code></pre><p> <strong>2.数组的遍历</strong><br> 使用的是传统的数组遍历</p>
-<pre><code>var temp = new Array();
-    for(var i=0,a;a = array[i];i++)
-    {
-         temp[i] = cloneObject(a);
-    }
-</code></pre><p>这里遇到了几个坑，先说一下：<br>当使用<br><code>for(var a in array)</code><br><code>{console.log(a+typeof a)}</code><br>得到的值是<br>0 string<br>1 string<br>2 string<br>这种方法并不行<br>还有一个坑就是当使用<br><code>for(var i=0,a;a = array[i++];)</code>时<br>i会在a被赋值后就自动增加而不是等到一个循环完成再增加<br>；也就是遍历结果是对的，但是i的数值变化是从1开始而不是从0开始的！<br>在赋值的过程中，我首先使用的是temp.push()方法！但是！push方法会让<br>temp数组新增加的元素的类型为undefined！这不是我想要的结果！我要的是完美克隆，即数组里面对象类型也要和原来的一致。看了MDN的api接口发现解决方法如下：<br><code>Array.prototype.push.apply(temp,array);</code><br> <strong>3.对象的遍历</strong></p>
-<pre><code>var temp = {}; 
-           var keys = Object.keys(src);
-           // keys 为对象src的键名字数组
-           // 它是数组！！！
-           for(var i=0,a;a=keys[i];i++)
-           {
-               temp[a] = cloneObject(src[a]);
-           }
-</code></pre><p>对象的遍历，首先获得它的键数组（对象自带的keys()方法），然后再通过键遍历一次值就行了，很简单。</p>
-<p>心得：ife的题真的很能锻炼基础。感谢百度前端技术学院！（这波广告我给自己88分）！多看MDN总会有收获！下面附上我的代码！（请无视里面的吐槽注释还有一些小白的地方）</p>
-<pre><code>var cloneObject = function(src){
-    var Result;
-    switch(Object.prototype.toString.call(src)){
-        case &quot;[object Number]&quot;: 
-            Result = (typeof src === &quot;object&quot;?new Number(src):parseInt(src.toString()));
-            break;
-        case &quot;[object String]&quot;:
-            // 遍历字符串 =.= 好像没啥意义
-            // {
-            //     var temp = src.split(&quot;&quot;);
-            //     var cloneString=&quot;&quot;;
-            //     for(var i=0;i&lt;temp.length;i++)
-            //     {
-            //         cloneString+=temp[i];
-            //     }
-            // }
-            Result = (typeof src === &quot;object&quot;?new String(src):src.toString());
-            break;
-        case &quot;[object Boolean]&quot;:
-            Result = (typeof src === &quot;Boolean&quot;?new Boolean(src):src);
-            break;
-        case &quot;[object Date]&quot;:
-            Result = new Date(src);
-            break;
-        case &quot;[object Array]&quot;:
-            var temp = new Array();
-              // Array.prototype.push.apply(temp,src);
-             // 当使用for(var i=0,a;a = src[i++];) i会在a被赋值后就自动增加而不是
-             // 等到一个循环完成再增加
-            for(var i=0,a;a = src[i];i++)
-            {
-                  // temp.push(cloneObject(a));
-                  // 使用push方法会让数组所有元素的类型变成undfined
-                 temp[i] = cloneObject(a);
-            }
-            Result = temp;
-            delete temp;
-            break;
-        case &quot;[object Object]&quot;:
-            var temp = {}; 
-            var keys = Object.keys(src);
-            // keys 为对象src的键名字数组
-            // 它是数组！！！
-            for(var i=0,a;a=keys[i];i++)
-            {
-                temp[a] = cloneObject(src[a]);
-            }
-            Result = temp;
-            delete temp;
-            delete keys;
-            break;
-        default:
-            break;
-    }
-    return Result;
-}
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
@@ -461,70 +353,6 @@ filter:
 
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/28/hello-world/" class="article-date">
-  	<time datetime="2016-02-28T11:59:56.268Z" itemprop="datePublished">2016-02-28</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/28/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -548,8 +376,8 @@ filter:
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
