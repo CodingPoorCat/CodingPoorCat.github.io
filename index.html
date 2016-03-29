@@ -198,6 +198,91 @@
 
       <div class="body-wrap">
   
+    <article id="post-JavaScript闭包实现原理" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/29/JavaScript闭包实现原理/" class="article-date">
+  	<time datetime="2016-03-29T14:34:30.000Z" itemprop="datePublished">2016-03-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/29/JavaScript闭包实现原理/">JavaScript闭包实现原理</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="JavaScript闭包实现原理"><a href="#JavaScript闭包实现原理" class="headerlink" title="JavaScript闭包实现原理"></a>JavaScript闭包实现原理</h1><p>标签（空格分隔）： js</p>
+<hr>
+<h2 id="什么是闭包？"><a href="#什么是闭包？" class="headerlink" title="什么是闭包？"></a>什么是闭包？</h2><p>闭包是指有权访问另外一个函数作用域的函数。</p>
+<hr>
+<h2 id="为什么需要闭包？"><a href="#为什么需要闭包？" class="headerlink" title="为什么需要闭包？"></a>为什么需要闭包？</h2><p>因为JavaScript没有修饰符（像java的private）,只能通过函数作用域去模拟”私有”这个概念。</p>
+<hr>
+<h2 id="怎么样创建闭包？"><a href="#怎么样创建闭包？" class="headerlink" title="怎么样创建闭包？"></a>怎么样创建闭包？</h2><p>创建闭包的常见方式就是在一个函数（外部函数）内返回一个匿名函数，而匿名函数则引用外部函数的私有变量（方法）。这就完成了类似”私有”的功能。<br>例如：</p>
+<pre><code>funtion foo(){
+    var private=0;
+    return function(){
+        console.log(private++);
+    }
+}
+</code></pre><p>以上代码创建了一个闭包。因此，闭包内的private变量就被闭包”私有”了，该私有变量在闭包生存期间并不会被回收，外部函数访问不了私有变量，因此，只有闭包可以对私有变量进行访问。</p>
+<pre><code>//f1是一个闭包
+var f1 = foo();
+f1();//输出0；
+f1();//输出1；
+f1();//输出2；
+//f2是另外一个闭包，console.log(f1===f2) 输出为false;
+var f2 = foo();
+f1();//输出0；
+f1();//输出1；
+f1();//输出2；
+</code></pre><p>从例子可以看到，f1 f2各有各自的私有变量private,两者并不影响。那么闭包是怎么样实现”私有”的呢？</p>
+<hr>
+<h2 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h2><p>上文说到JavaScript通过函数作用域去模拟”私有”的，那么我们要从作用域链的创建说起。</p>
+<ol>
+<li>foo函数第一次被调用时，会创建一个执行环境（execution context）以及相应的作用域链，并把作用域链赋值给一个特殊的内部属性[Scope]。</li>
+<li>使用this,arguments和其他命名参数初始化函数活动对象（activation object）。作用域链从本函数延伸到全局函数。大概就是这样：<img src="http://codingpoorcat.github.io/demos/images/1.jpg" alt="foo创建过程"></li>
+<li>然后执行到闭包时，同样地进行1.2的步骤，结果就是<strong>闭包将外部函数（foo）的活动对象</strong>和全局变量对象<strong>添加到它的作用域链上</strong>。<img src="http://codingpoorcat.github.io/demos/images/2.jpg" alt="闭包创建过程">也正是因为<strong>闭包对外部函数的变量进行引用</strong>，所以无论外部函数是否存在，外部函数的活动对象都会保存在闭包的作用域链上！在闭包的生存期间，该变量并不会被垃圾回收例程回收。</li>
+</ol>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>总的来说，闭包就是通过作用域链的特性，将外部函数活动变量保存在自身的作用域链上。<br>一：通过外部函数的作用域隔离访问，让除闭包外的其他函数无法访问该变量；<br>二：保持对活动变量的引用来实现私有</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-实现一个简单的" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
