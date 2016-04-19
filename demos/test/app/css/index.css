@@ -7,19 +7,13 @@ a {
     text-decoration: none;
     color: #fff;
 }
-
+i{
+	font-style: normal;
+}
 header {
     position: fixed;
     z-index: 10;
 }
-
-.top {
-    width: 100%;
-    background: #161616;
-    line-height: 1.386667rem;
-    text-align: center;
-}
-
 p {
     font-size: 12px;
 }
@@ -31,6 +25,14 @@ p {
 [data-dpr="3"] p {
     font-size: 36px;
 }
+
+.top {
+    width: 100%;
+    background: #161616;
+    line-height: 1.386667rem;
+    text-align: center;
+}
+
 
 .top .back {
     float: left;
@@ -197,19 +199,18 @@ p {
     background-size: 3.76rem 0.65rem;
     background-position: -3rem 0.06rem;
 }
-
-.hot-user i,
-.hot-user span {
+.hot-user span{
+	color: #595959;
+}
+.hot-user i{
     font-size: 12px;
 }
 
-[data-dpr="2"] .hot-user i,
-.hot-user span {
+[data-dpr="2"] .hot-user i{
     font-size: 24px;
 }
 
-[data-dpr="3"] .hot-user i,
-.hot-user span {
+[data-dpr="3"] .hot-user i{
     font-size: 36px;
 }
 
