@@ -10,6 +10,10 @@ a {
 i{
 	font-style: normal;
 }
+header {
+    position: fixed;
+    z-index: 10;
+}
 p {
     font-size: 12px;
 }
@@ -21,24 +25,52 @@ p {
 [data-dpr="3"] p {
     font-size: 36px;
 }
-@font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1461222332'); /* IE9*/
-  src: url('iconfont.eot?t=1461222332#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1461222332') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1461222332') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1461222332#iconfont') format('svg'); /* iOS 4.1- */
+
+.top {
+    width: 100%;
+    background: #161616;
+    line-height: 1.386667rem;
+    text-align: center;
 }
 
-.iconfont {
-  font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-stroke-width: 0.2px;
-  -moz-osx-font-smoothing: grayscale;
+
+.top .back {
+    float: left;
+    display: inline-block;
+    width: 0.666667rem;
+    height: 1.386667rem;
+    background: url('../images/sprites.png') no-repeat;
+    background-size: 3.76rem 0.533333rem;
+    background-position: 0.133333rem 0.4rem;
 }
 
-/*导语部分*/
+.top .title {
+    color: #fff;
+    font-size: 15px;
+}
+
+[data-dpr="2"] .top .title {
+    font-size: 30px;
+}
+
+[data-dpr="3"] .top .title {
+    font-size: 45px;
+}
+
+.top .more {
+    float: right;
+    display: inline-block;
+    width: 0.666667rem;
+    height: 1.386667rem;
+    background: url('../images/sprites.png') no-repeat;
+    background-size: 3.76rem 0.533333rem;
+    background-position: -0.933333rem 0.4rem;
+}
+
+.content {
+    padding-top: 1.386667rem;
+}
+
 .content .pic img {
     width: 100%;
     height: 3.925333rem;
@@ -95,9 +127,7 @@ p {
 [data-dpr="3"] .banner .lead-content p {
     font-size: 52px;
 }
-/*导语部分结束*/
 
-/*红人馆*/
 .item-title {
     position: relative;
     margin-top: 0.226667rem;
@@ -108,7 +138,7 @@ p {
 .item-title:after {
     position: absolute;
     top: 0;
-    right: -0.026667rem;
+    right: -2px;
     display: block;
     height: 0;
     width: 0;
@@ -229,21 +259,7 @@ p {
     display: block;
     line-height: 0.533333rem;
 }
-/*视频播放组件*/
-.playbox{
-	display: inline-block;
-	position:relative;
-}
-.playbox video {
-    position: absolute;
-    top: 0.324067rem;
-    left: 0;
-    width: 3.175867rem;
-    height: 3.175867rem;
-}
-video::-webkit-media-controls {
-  display:none !important;
-}
+
 .video-item {
     position: relative;
     display: inline-block;
@@ -258,83 +274,20 @@ video::-webkit-media-controls {
     height: 3.148148rem;
 }
 
-.control-bar{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 0.666667rem;
-	background-color: rgba(0,0,0,.6);
-	z-index: 2147483647;
-}
-.control-bar>div{
-	display: inline-block;
-}
-.control-bar .iconfont{
-	font-size: 18px;
-	color:#f0f0f0;
-}
-/*[data-dpr="2"] .control-bar .iconfont{
-	font-size: 18px;
-}
-[data-dpr="3"].control-bar .iconfont{
-	font-size: 54px;
-}*/
-
-.noFullBtn{
-	float: right;
-	margin-right: 0.266667rem;
-	line-height: 0.666667rem;
+.video-item video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.148148rem;
+    height: 3.148148rem;
 }
 
-.time{
-	position: absolute;
-	left: 0.2rem;
+.playBtn {
+    width: 100%;
+    height: 100%;
 }
-.time span{
-	font-size: 10pt;
-	color:#fff;
-	line-height: 0.666667rem;
-}
-.time .split{
 
-}
-.split::before{
-	content: "/";
-	padding: 0 1pt;
-}
-.progress-bar {
-	position: absolute;
-	top: 50%;
-	left: 100pt;
-	right: 60pt;
-	width: auto;
-	margin-top: -1.5pt;
-	height: 3pt;
-	background-color: #777a80;
-}
-.progress-bar .tracker{
-	height: 3pt;
-	/*background-color:#f5f5f5;*/
-}
-.progress-bar .thumb{
-	position: absolute;
-	top:0;
-	left: 0;
-	height: 3pt;
-	background:#fff; 
-}
-.thumb .dot{
-	position: absolute;
-	right: -10pt;
-	top: -8.5pt;
-	width: 10pt;
-	height: 10pt;
-	border-radius:50%;
-	margin: 5pt;
-	background-color:#fff;
-}
-.status-icon .play-icon {
+.playBtn .button {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -348,7 +301,7 @@ video::-webkit-media-controls {
     background-position: 0.266667rem 0.266667rem;
     background-size: 0.506667rem 0.555556rem;
 }
-/*视频播放组件结束*/
+
 .article-item {
     display: inline-block;
     width: 5.416667rem;
@@ -384,7 +337,6 @@ h3 {
     color: #5d5d5d;
     line-height: 1.2em;
 }
-/*红人馆结束*/
 
 .toTop {
     background: #fff;
@@ -440,6 +392,7 @@ h3 {
 .topic .backImg img{
 	height: 4.96rem;
 	width: 100%;
+	z-index: 0;
 	-webkit-filter: blur(2px);
     -moz-filter: blur(2px);
     -o-filter: blur(2px);
@@ -567,12 +520,4 @@ h3 {
 
 [data-dpr="3"] .past-detail span {
     font-size: 42px;
-}
-
-/*全局样式*/
-.hide{
-	display: none !important;
-}
-.active{
-	display: block !important;
 }
