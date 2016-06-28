@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body{
+	min-width: 500px;
+}
+@font-face {
+    font-family: "iconfont";
+    src: url('iconfont.eot?t=1467029743');
+    /* IE9*/
+    src: url('iconfont.eot?t=1467029743#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff?t=1467029743') format('woff'), /* chrome, firefox */
+    url('iconfont.ttf?t=1467029743') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1467029743#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ziliaoku:before { content: "\e600"; }
+.icon-shezhi:before { content: "\e605"; }
+.icon-yonghuming:before { content: "\e601"; }
+.icon-caidan:before { content: "\e602"; }
+.icon-transfer:before { content: "\e604"; }
+.icon-del:before { content: "\e606"; }
+.icon-iconyonghu:before { content: "\e603"; }
+.icon-plus:before { content: "\e607"; }
+
+
+.ellipsis {
+    /*width: auto!important;*/
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+.clf{
+	*zoom:1;
+}
+.clf:after{
+	content: ".";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+/*nav*/
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+    min-width: 500px;
+}
+
+.nav nav {
+    position: relative;
+    height: 50px;
+}
+
+.nav .bavbar_left {
+   margin-left: 40px;
+    min-width: 160px;
+}
+
+.nav .bavbar_left img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.nav .bavbar_left span {
+    color: #bbb;
+    font-size: 23px;
+    vertical-align: middle;
+    line-height: 50px;
+}
+
+.nav .bavbar_left b {
+    padding: 2px;
+    margin-left: 3px;
+    font-size: 12px;
+    color: #aaa;
+    border-left: 2px solid #bbb;
+}
+
+.navbar_mid {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+}
+
+.navbar_mid li {
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.navbar_right {
+	display: inline-block;
+    float: right;
+    min-width: 100px;
+}
+
+.navbar_right img {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.active {
+    color: lightblue;
+    background: #f5f5f5;
+}
+
+
+/*content*/
+
+.content {
+    margin-top: 50px;
+    padding: 20px 100px;
+    background: rgba(233, 240, 246, 1);
+}
+
+.courseList {
+    margin: 20px 0;
+}
+
+.courseList li {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.item {
+	position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 100%;
+
+}
+
+.item_box {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 3px 3px rgba(200, 200, 200, 1);
+    border-radius: 10px;
+    background: url('../images/bg3.jpg') 100% 100% no-repeat;
+}
+.item_box:hover{
+    -webkit-animation: upFloat 0.5s ease-in-out alternate forwards;
+    -o-animation: upFloat 0.5s ease-in-out alternate forwards;
+    animation: upFloat 0.5s ease-in-out alternate forwards;
+}
+
+.add_item {
+    background: #fff!important;
+    cursor:pointer;
+}
+
+.add_item i{
+	display: block;
+	text-align: center;
+	margin:auto;
+	line-height: 150px;
+	font-size: 30px;
+}
+.add_item:hover i{
+	color: lightblue;
+}
+.courseList li {
+    margin: 10px;
+}
+
+.courseList li:nth-child(1) .info {
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+
+.item_box img {
+    position: absolute;
+    left: 0;
+    width: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.item_box .task_name {
+    margin: 15px 10px 0 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    width: 70%;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+.time {
+    margin-left: 10px;
+}
+
+.time span {
+    color: #fff;
+    font-size: 8px;
+}
+
+.time .word_style {
+    color: rgba(0, 0, 0, .5);
+    background: #fff;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.infobar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 5px;
+    z-index: 100;
+}
+
+.infobar i {
+    color: #FFF;
+    font-size: 12px;
+    margin: 0 5px 0 10px;
+}
+.infobar i:hover{
+	color:#eee;
+}
+.infobar span {
+    font-size: 10px;
+    color: #fff;
+}
+
+.infobar .setting {
+    float: right;
+    position: relative;
+}
+
+.infobar .setting i {
+	position: relative;
+    font-size: 15px;
+    color: #eee;
+}
+
+.course_info {
+    font-size: 12px;
+    margin-top: 10px;
+    color: rgba(150, 155, 160, 1);
+}
+
+.course_info .labels {
+    margin: 8px 0;
+}
+
+.course_info .iconfont {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.course_info .label {
+	display: inline-block;
+    border: 1px solid rgba(150, 155, 160, 1);
+    padding: 2px;
+    margin: 2px 2px;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+/*settingBox*/
+.settingBox{
+	display: none;
+	position: absolute;
+	top: 170px;
+	left: 130px;
+	width: 180px;
+	padding: 12px 20px;
+	background: #fff;
+	z-index: 100;
+}
+.settingBox:before{
+	position: absolute;
+	left: 50%;
+	top:-10px;
+	margin-left: -10px;
+	content: " ";
+	height: 0;
+	width: 0;
+	border-left:10px solid transparent; 
+	border-right:10px solid transparent; 
+	border-bottom:10px solid #fff; 
+}
+.settingBox input{
+	width: 96%;
+	height: 24px;
+	z-index: 1000000!important;
+}
+.settingBox .iconfont.iconfont{
+	font-size: 12px;
+	margin-right: 10px;
+	color: #000;
+}
+.settingBox div{
+	margin:10px 0;
+	font-size: 12px;
+	cursor: pointer;
+	color: #000;
+}
+
+
+/*响应式设计*/
+.menu_icon{
+	display: none;
+
+	}
+.menu_icon .iconfont{
+	font-size: 30px;
+	line-height: 50px;
+	margin:0 30px;
+	vertical-align: middle;
+}
+@media (max-width: 780px){
+	.menu_icon{
+		display: inline-block;
+	}
+	.navbar_mid{
+		display: none;
+	}
+}

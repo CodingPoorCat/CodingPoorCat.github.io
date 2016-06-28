@@ -1,0 +1,20 @@
+@keyframes upFloat{
+	form{
+		transform:translate3d(0,0,0);
+		box-shadow: 0 3px 3px rgba(200, 200, 200, 1);
+	}to{
+		
+		transform:translate3d(0,-5px,0);
+		box-shadow: 0 10px 10px rgba(200, 200, 200, 1);
+	}
+}
+@-webkit-keyframes upFloat{
+	form{
+		transform:translate3d(0,0,0);
+		box-shadow: 0 3px 3px rgba(200, 200, 200, 1);
+	}to{
+		
+		transform:translate3d(0,-5px,0);
+		box-shadow: 0 10px 10px rgba(200, 200, 200, 1);
+	}
+}
